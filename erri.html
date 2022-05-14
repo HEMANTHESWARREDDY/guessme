@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+	<title>THIS OR THAT</title>
+</head>
+<body>
+	<div class="container" style="text-align: center;">
+	<img
+		src="211FA18115.JPG"
+		onclick="enlargeImg()"
+		id="img1"
+	/>
+	<br /><br /><br />
+	<button onclick="resetImg()">Reset</button>
+	</div>
+	<script>
+	img = document.getElementById("img1");
+	function enlargeImg() {
+		img.style.transform = "scale(1.5)";
+		img.style.transition = "transform 0.25s ease";
+	}
+	function resetImg() {
+		img.style.transform = "scale(1)";
+		img.style.transition = "transform 0.25s ease";
+	}
+	</script>
+</body>
+</html>
