@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: #4c6ca0;
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+        }
+        .navbar li a{
+            display: block;
+            color: aliceblue;
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+        .navbar li a:hover{
+            background-color: #446190;
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="https://bobbyhemanth.blogspot.com/">MENU</a></li>
+        <li><a href="https://bobbyhemanth.blogspot.com/2022/02/i-think-you-are-ready-to-guess.html">ABOUT</a></li>
+        <li><a href="https://bobbyhemanth.blogspot.com/2022/01/our-first-project.html">CONTACT</a></li>
+        <li><a href="https://bobbyhemanth.blogspot.com/2022/01/my-physics-exam.html">LOGOUT</a></li>
+    </ul><br>
+    </ul>
+    <div style="text-align: center;">
+        <div class="container">
+            <div class="box">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h1 id="message">
+                        I THINK YOU KNOW WHO AM I <br>
+                    </h1>
+                    <img id="myImage" src="https://blogger.googleusercontent.com/img/a/AVvXsEjmKjQlSXzARNxaPaLY_Ixp7McbZfjWkUvrQb558hmY1nQrS5Xu5rqRYht5U2ur1fjJRLfZbg8PGSDwNKJu_p6PPmfrK5lA9X5ud9jVrtq8c6NACaRIznyfMQnIhgGjKIrkxkCs2SNFdLC5yxZqEb1nEruPw44MX4283Ug32qPYPJNnrfZcyq-fjez7rQ=s320" alt="ntg">
+                </div> 
+                <div class="col-md-3"></div>
+            </div>
+        </div><br>
+            <div class="button">
+                <p><button class="btn-btn-warning"
+                    onclick=previous();>
+                    previous
+                </button>====
+                <button class="btn-btn-success"
+                    onclick=next();>
+                    next
+                </button></p>
+            </div>
+            <script>
+                function next(){
+                    document.getElementById("myImage")
+                    .src="https://blogger.googleusercontent.com/img/a/AVvXsEiVUHOSTL6u7Kam6haJ86SYC7lztKjUW9X0VdCLCOdPdWoWaS-VaiLc7dQD9MZC1VGByh5L49Zdnn9Boe4gyTUROrsmHj8Ckjgqp9PHp2KlPIlYSKuYE3Mjp4keY8m77r_geBedLfa04LXgLTNpiEZ0ur9gbnsjyiQl0zaFOqFIXN2St93pwYFmcS4HeA=s320 "
+                    document.getElementById("message")
+                    .innerHTML="HOLA!GUESSME"
+                }
+                function previous(){
+                    document.getElementById("myImage")
+                    .src="https://blogger.googleusercontent.com/img/a/AVvXsEgqf60rnG1yhvtK3IirXoGaczzztdjIuvwKvtlmv6z5sBnvK7tSMlvX6LFJM1gG10HjHN33HmCJM8PKvL-Vn8gGLtaDtsSDfv7pX3k1SIB43DW0J6KKh0juRpHH0OLgwCnWCi3HlsD3KBW1_7V4Fyn_iov9hlnuea1uGi1Q1qMb2kuetltGenspPs4jAg"
+                    document.getElementById("message")
+                    .innerHTML="SALVE!GUESSME"
+                }
+            </script>
+    </div><br>
+    <div style="text-align: center;">
+        <label for="name">NAME:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">AGE:</label><br>
+        <input type="number" id="age" name="age"><br>
+        <label for="id number">ID NUMBER:</label><br>
+        <input type="number" name="number" id="id number"><br>
+        <label for="sex">SEX:</label><br>
+        <select name="sex" id="sex"><br>
+            <option value="male" selected>MALE</option>
+            <option value="female">FEMALE</option>
+            <option value="other">OTHER</option>
+        </select><br>
+        <label for="comment">COMMENT:</label><br>
+        <textarea name="comment" id="comment" cols="11" rows="7"></textarea><br>
+        <button onclick="change_text()">Submit</button>
+        <script>
+        function change_text(){
+        var name = document.getElementById("name","age","id number","sex","comment").value;
+        document.getElementById("demo").innerHTML = "HOLA!"+name;
+        }
+        </script>
+        <p id="demo"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+import random
+#FIRST IMAGE
+x=int(input())
+y=int(input())
+a=[]
+for i in range(x,y+1):
+    a.append(i)
+print(a)
+b=[]
+while 1>0:
+    if len(b)==len(a):
+        print(b)
+        break
+    else:
+        c=random.randint(x,y)
+        if c in b:
+            continue
+        else:
+            b.append(c)
+else:
+    print("sorry")
+#SECOND IMAGE
+X=int(input())
+Y=int(input())
+A=[]
+for I in range(X,Y+1):
+    A.append(I)
+print(A)
+B=[]
+while 1>0:
+    if len(B)==len(A):
+        print(B)
+        break
+    else:
+        C=random.randint(X,Y)
+        if C in B:
+            continue
+        else:
+            B.append(C)
+else:
+    print("hi")
